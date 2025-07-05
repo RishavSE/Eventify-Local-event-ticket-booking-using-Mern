@@ -24,7 +24,7 @@ const AdminPanel = () => {
     availableBack: 0,
   });
 
-  const TMDB_API_KEY = "e27ed7074beb1b541d30504cd37b496a";
+  const TMDB_API_KEY = "Enter_your_key";
 
   // ✅ Auto-reset seats at 12AM if needed
   useEffect(() => {
