@@ -1,0 +1,182 @@
+@import 'primereact/resources/themes/lara-light-indigo/theme.css'; 
+@import 'primereact/resources/primereact.min.css';                
+@import 'primeicons/primeicons.css';   
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+}
+
+/* Navbar */
+.logo{
+  font-size: 1.5rem;
+  align-self: center;
+  font-weight: bolder;
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.16);
+  z-index: 10;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-weight: bold;
+}
+.nav-links a:hover{
+  color: #7f5af0;
+  text-decoration: underline;
+  /* border-radius: 20px; */
+  /* background-color: rgb(194, 191, 191); */
+}
+
+
+/* Hero */
+.hero {
+  text-align: center;
+  font-size: bolder;
+  height: 600px;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #7f5af0, #d946ef);
+  color: white;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.hero input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+}
+.search-btn {
+  background: #4f46e5;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.search-btn :hover{
+  color :black;
+}
+
+/* Categories */
+.categories {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.category-card {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 120px;
+}
+.category-card i {
+  font-size: 2rem;
+  color: #7f5af0;
+}
+.popular-events {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.event-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 260px;
+  overflow: hidden;
+  text-align: left;
+}
+.event-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.event-info {
+  padding: 1rem;
+}
+.event-info h3 {
+  margin: 0.5rem 0;
+}
+.event-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+.price {
+  font-weight: bold;
+  color: #7f5af0;
+}
+.book-btn {
+  background: #7f5af0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.book-btn:hover {
+  background: #5b3fc2;
+}
+/* Popular Event Cards */
+.event-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background: #f9f9f9;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-text {
+  background: linear-gradient(135deg, #7f5af0, #d946ef);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-right: 0.6rem;
+  color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}

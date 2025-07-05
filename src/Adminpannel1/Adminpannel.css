@@ -1,0 +1,181 @@
+.admin-panel {
+  background: linear-gradient(135deg, #7f5af0, #d946ef); /* 🌈 Gradient background */
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+  color: black; /* Text color for visibility */
+}
+
+
+.admin-panel h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #1a1a2e; /* Adjusted for better contrast on white */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Stats section */
+.stats-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #ffffff, #d0eaff);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #cce5ff;
+}
+
+.stat-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.stat-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+.stat-card p {
+  font-size: 2.0rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Table Styles */
+.user-table-section {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+/* .stats-grid {
+  background: linear-gradient(135deg, #7f5af0, #d946ef);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} */
+
+/* .dashboard-section {
+  background: linear-gradient(135deg, #7f5af0, #d946ef);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+} */
+
+/* Optional: center the heading in white */
+.dashboard-section h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Ensure table remains clean white inside */
+.user-table-section {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.csv-export-bottom-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+
+.csv-export-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.csv-export-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.seat-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.seat-inputs input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.seat-inputs button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat-inputs button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,71 @@
+.my-tickets-page {
+  padding: 2rem;
+  background: linear-gradient(to right, #141e30, #243b55);
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.my-tickets-page h2 {
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tickets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding-left: 2rem;
+  align-items: stretch; /* ✅ ensures cards stretch equally in height */
+}
+
+.ticket-card {
+  background-color: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
+  flex: 1 1 350px; /* ✅ grow/shrink as needed, base size 350px */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket-card:hover {
+  transform: scale(1.02);
+}
+
+.price {
+  color: #f5a623;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.pdf-btn {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: auto; /* ✅ pushes button to bottom */
+  align-self: flex-start; /* optional: align button to left */
+}
+
+.pdf-btn:hover {
+  background-color: #e91e63;
+}

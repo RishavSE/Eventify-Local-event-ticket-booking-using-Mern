@@ -1,0 +1,140 @@
+.footer {
+  background: #111;
+  color: white;
+  padding: 0.1rem 2rem !important;
+}
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.footer-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-col-right {
+  align-items: flex-end;
+  text-align: right;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 1.5rem;
+}
+.footer-col h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer-col p,
+.footer-col li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.footer-col ul {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-col ul li {
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.footer-col ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-col ul li a:visited,
+.footer-col ul li a:active,
+.footer-col ul li a:focus {
+  color: inherit;
+}
+.footer-col ul li:hover,
+.footer-col ul li:hover a,
+.footer-col ul li a:hover {
+  color: #7f5af0;
+}
+.footer-col ul li:hover {
+  color: #7f5af0;
+}
+.footer-col .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+.footer-col .social-icons i {
+  background: #2a2a2a;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.7rem;
+}
+.footer-col .social-icons i:hover {
+  background: #7f5af0;
+  color: white;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-brand {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 1.3rem;
+  /* margin-bottom: 0.3rem; */
+}
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin-bottom: 2rem;
+}
+ /* Responsive  */
+ @media (max-width: 900px) {
+  .footer-columns {
+ flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .footer-col .social-icons {
+    justify-content: center;
+  }
+  .footer-col,
+  .footer-col-center,
+  .footer-col-right {
+    min-width: unset;
+    width: 100%;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+  .footer-col-right {
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 0.5rem;
+  }
+  .footer-brand {
+    font-size: 1rem;
+  }
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+  .footer-col .social-icons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

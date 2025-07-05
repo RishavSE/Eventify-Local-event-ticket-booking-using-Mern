@@ -1,0 +1,83 @@
+/* Full-screen blurred overlay background */
+.changepass-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px); /* 👈 This enables blur */
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.changepass-box {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 24px 16px;
+  border-radius: 12px;
+  max-width: 320px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Title */
+.changepass-title {
+  text-align: center;
+  color: #7b2ff7;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+/* Form */
+.changepass-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.changepass-form label {
+  font-weight: 500;
+  color: #7b2ff7;
+  margin-bottom: 0.98rem;
+}
+
+.changepass-form input {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.changepass-form input:focus {
+  border: 1.5px solid #7f5af0;
+}
+
+
+.changepass-btn {
+  background: linear-gradient(90deg, #7f5af0, #d946ef);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.changepass-btn:hover {
+  background: linear-gradient(90deg, #6a4cff, #c026d3);
+}
+
+
+.cancel-btn {
+  background: #ef4444;
+  margin-top: 10px;
+}

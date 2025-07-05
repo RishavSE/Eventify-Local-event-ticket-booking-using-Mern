@@ -1,0 +1,106 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.booking-modal {
+  background: #fff0f6;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.booking-modal h2 {
+  margin-bottom: 1rem;
+  color: #d63384;
+}
+
+.booking-modal label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.booking-modal input,
+.booking-modal select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.summary {
+  margin-top: 1rem;
+  background: #ffe0ef;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.total-amount {
+  color: #d63384;
+  font-weight: bold;
+}
+
+.book-btn {
+  margin-top: 1rem;
+  width: 100%;
+  background: #d63384;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  background: transparent;
+  color: #d63384;
+  border: 2px solid #d63384;
+  padding: 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.booking-modal {
+  background: #fff0f6;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  max-height: 95vh;
+  overflow-y: auto;
+  position: relative;
+}

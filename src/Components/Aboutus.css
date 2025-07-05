@@ -1,0 +1,142 @@
+.about-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 4rem;
+}
+
+.about-hero {
+  background: linear-gradient(to right, #7f5eff, #d946ef);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+.about-cards {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.about-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+.about-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero p {
+  font-size: 1rem;
+}
+
+
+.about-card h2 {
+  color: #6a0dad;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.card-content ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  background-color: #7f5eff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.btn-primary:hover {
+   background-color: #5b3fc2;
+}
+/* Responsiveness */
+@media (max-width: 900px) {
+  .about-hero {
+    padding: 2.5rem 1rem;
+  }
+  .about-hero h1 {
+    font-size: 1.7rem;
+  }
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 0 0.5rem;
+  }
+  .about-card {
+    padding: 1rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-container {
+    padding-bottom: 2rem;
+  }
+  .about-hero {
+    padding: 1.2rem 0.5rem;
+  }
+  .about-hero h1 {
+    font-size: 1.2rem;
+  }
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+  .about-cards {
+    margin: 1rem 0;
+    padding: 0 0.2rem;
+    gap: 0.7rem;
+  }
+  .about-card {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .about-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+  }
+  .card-content ul, .card-content p {
+    font-size: 0.95rem;
+  }
+}
