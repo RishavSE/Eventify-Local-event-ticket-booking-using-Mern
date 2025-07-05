@@ -24,14 +24,14 @@ const TMDBMovies = () => {
         const [popularRes, topRatedRes] = await Promise.all([
           axios.get("https://api.themoviedb.org/3/movie/popular", {
             params: {
-              api_key: "e27ed7074beb1b541d30504cd37b496a",
+              api_key: "Enter_your_api",
               language: "en-US",
               page: 1,
             },
           }),
           axios.get("https://api.themoviedb.org/3/movie/top_rated", {
             params: {
-              api_key: "e27ed7074beb1b541d30504cd37b496a",
+              api_key: "Enter_your_api",
               language: "en-US",
               page: 1,
             },
