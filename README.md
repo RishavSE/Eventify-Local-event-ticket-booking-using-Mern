@@ -42,7 +42,7 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 - 🔁 Auto seat reset every day at **12:00 AM**
 
 
-📱 RESPONSIVE UI
+📱 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐕𝐄 𝐔𝐈
 
 🧩 Built with fully responsive design using plain CSS and media queries.
 
