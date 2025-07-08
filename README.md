@@ -43,6 +43,7 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 
 
 📱 RESPONSIVE UI
+
 🧩 Built with fully responsive design using plain CSS and media queries.
 
 📱 Optimized for all screen sizes — from mobile phones to large desktops.
