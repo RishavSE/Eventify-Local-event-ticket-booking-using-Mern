@@ -44,19 +44,19 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 
 📱 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐕𝐄 𝐔𝐈
 
-  🧩 Built with fully responsive design using plain CSS and media queries.
+   -🧩 Built with fully responsive design using plain CSS and media queries.
 
-  📱 Optimized for all screen sizes — from mobile phones to large desktops.
+   -📱 Optimized for all screen sizes — from mobile phones to large desktops.
 
-  🎯 Flexible layouts using Flexbox, percentage-based widths, and adaptive components.
+   -🎯 Flexible layouts using Flexbox, percentage-based widths, and adaptive components.
 
-  🧪 Tested on:
+   🧪 Tested on:
 
-   📱 Android & iOS smartphones
+    -📱 Android & iOS smartphones
 
-   💻 Laptops & desktops
+    -💻 Laptops & desktops
 
-   📱 Chrome DevTools device simulators
+    -📱 Chrome DevTools device simulators
 ---
 
 
