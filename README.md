@@ -89,7 +89,9 @@ npm run dev
 ## 📄 LICENSE
 
 This project is licensed under the **MIT License** 
-This project is developed for learning and demonstration purposes. 
+
+This project is developed for learning and demonstration purposes.
+
 © 2025 Rishav Kumar Singh
 
 ---
