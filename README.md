@@ -29,7 +29,6 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 - ✅ Real-time ticket booking and availability
 - 📋 View “My Tickets”
 - 🧾 PDF ticket generation
-- ♻️ Password reset via email
 
 ### 🧑‍💼 Admin Features
 - 🔐 Admin-secured dashboard
