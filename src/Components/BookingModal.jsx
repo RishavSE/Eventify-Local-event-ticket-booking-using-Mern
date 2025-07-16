@@ -247,18 +247,26 @@ const BookingModal = ({ event, onClose }) => {
 
   useEffect(() => {
     const fetchSeats = async () => {
-      const seatRef = ref(db, seatAvailability);
-      const snapshot = await get(seatRef);
-      const data = snapshot.val();
-      if (data) {
-        setSeatAvailability({
-          front: data.front?.available || 0,
-          middle: data.middle?.available || 0,
-          back: data.back?.available || 0,
-        });
+      try {
+        const seatRef = ref(db, 'seatAvailability');
+        const snapshot = await get(seatRef);
+        const data = snapshot.val();
+        if (data) {
+          setSeatAvailability({
+            front: data.front?.available || 0,
+            middle: data.middle?.available || 0,
+            back: data.back?.available || 0,
+          });
+        } else {
+          setSeatAvailability({ front: 0, middle: 0, back: 0 });
+        }
+      } catch (error) {
+        console.error('Error fetching seat availability:', error);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     };
+
     fetchSeats();
   }, []);
 
@@ -292,11 +300,11 @@ const BookingModal = ({ event, onClose }) => {
     const payingMembers = Math.max(formData.adults - formData.children, 0);
 
     if (available < payingMembers) {
-      alert('❌ Not enough ${formData.seatPreference} seats available.');
+      alert(`❌ Not enough ${formData.seatPreference} seats available.`);
       return;
     }
 
-    const ticketRef = ref(db, tickets/${user.uid});
+    const ticketRef = ref(db, `tickets/${user.uid}`);
     const ticket = {
       eventTitle: event.title,
       location: event.address || 'Online',
@@ -319,7 +327,7 @@ const BookingModal = ({ event, onClose }) => {
         },
       });
 
-      alert('✅ Booking Confirmed for ${formData.name}!');
+      alert(`✅ Booking Confirmed for ${formData.name}!`);
       onClose();
       navigate('/my-tickets');
     } catch (error) {
