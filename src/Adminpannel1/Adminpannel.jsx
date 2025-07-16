@@ -327,7 +327,7 @@ const AdminPanel = () => {
     availableBack: 0,
   });
 
-  const TMDB_API_KEY = "47dfdf8c0e765f9e9fb52737cabfa9c8";
+  const TMDB_API_KEY = "Enter_your_api_key";
 
   // ✅ Load seat availability
   useEffect(() => {
