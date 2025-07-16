@@ -279,12 +279,12 @@ const BookingModal = ({ event, onClose }) => {
     }
 
     const preference = formData.seatPreference.toLowerCase(); // front, middle, back
-    const seatRef = ref(db, seatAvailability);
+    const seatRef = ref(db, 'seatAvailability');
     const seatSnap = await get(seatRef);
     const seatData = seatSnap.val();
 
     if (!seatData || !seatData[preference]) {
-      alert(❌ Seat data not found.);
+      alert('❌ Seat data not found.');
       return;
     }
 
@@ -292,7 +292,7 @@ const BookingModal = ({ event, onClose }) => {
     const payingMembers = Math.max(formData.adults - formData.children, 0);
 
     if (available < payingMembers) {
-      alert(❌ Not enough ${formData.seatPreference} seats available.);
+      alert('❌ Not enough ${formData.seatPreference} seats available.');
       return;
     }
 
@@ -319,7 +319,7 @@ const BookingModal = ({ event, onClose }) => {
         },
       });
 
-      alert(✅ Booking Confirmed for ${formData.name}!);
+      alert('✅ Booking Confirmed for ${formData.name}!');
       onClose();
       navigate('/my-tickets');
     } catch (error) {
