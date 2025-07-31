@@ -7,8 +7,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-import { auth } from "../Firebase";
-import { db } from "../Firebase";
+import { auth, db } from "../Firebase";
 import { ref, set } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +21,7 @@ const SignIn = ({ onLogin }) => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
 
-  const ADMIN_EMAIL = "infosys@gmail.com"; // ✅ Set your admin email
+  const ADMIN_EMAIL = "infosys@gmail.com";
 
   // 🔐 Email & Password Login
   const handleSubmit = async (e) => {
@@ -31,45 +30,46 @@ const SignIn = ({ onLogin }) => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      onLogin();
-
-      // ✅ Save info
       const isAdmin = user.email === ADMIN_EMAIL;
+
       localStorage.setItem("userInfo", JSON.stringify(user));
       localStorage.setItem("role", isAdmin ? "admin" : "user");
       localStorage.setItem("isLoggedIn", "true");
 
+      if (onLogin) onLogin();
       navigate(isAdmin ? "/admin" : "/my-tickets");
+
     } catch (error) {
       console.error("Login error:", error.message);
       alert("Invalid email or password");
     }
   };
 
-  // 🔐 Google Sign-In + Save to DB
+  // 🔐 Google Sign-In + Save to DB + Redirect
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // ✅ Save user to Realtime DB
+      // Save user to Realtime DB
       await set(ref(db, `users/${user.uid}`), {
         name: user.displayName || "Google User",
         email: user.email,
       });
 
-      onLogin();
-
       const isAdmin = user.email === ADMIN_EMAIL;
+
       localStorage.setItem("userInfo", JSON.stringify(user));
       localStorage.setItem("role", isAdmin ? "admin" : "user");
       localStorage.setItem("isLoggedIn", "true");
 
+      if (onLogin) onLogin();
       navigate(isAdmin ? "/admin" : "/my-tickets");
+
     } catch (error) {
       console.error("Google login error:", error.message);
-      // alert("Google sign-in failed");
+      alert("Google sign-in failed");
     }
   };
 

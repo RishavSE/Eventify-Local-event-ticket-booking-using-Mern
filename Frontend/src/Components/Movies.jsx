@@ -5,6 +5,9 @@ import BookingModal from "./BookingModal";
 import { auth } from "../Firebase";
 import { useNavigate } from "react-router-dom";
 
+console.log("TMDB KEY = ", import.meta.env.VITE_TMDB_API_KEY);
+
+
 const TMDBMovies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
@@ -18,34 +21,35 @@ const TMDBMovies = () => {
     "Sector 17 Chandigarh", "Chandigarh", "Amritsar", "Bangalore"
   ];
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const [popularRes, topRatedRes] = await Promise.all([
-          axios.get("https://api.themoviedb.org/3/movie/popular", {
-            params: {
-              api_key: "e27ed7074beb1b541d30504cd37b496a",
-              language: "en-US",
-              page: 1,
-            },
-          }),
-          axios.get("https://api.themoviedb.org/3/movie/top_rated", {
-            params: {
-              api_key: "e27ed7074beb1b541d30504cd37b496a",
-              language: "en-US",
-              page: 1,
-            },
-          }),
-        ]);
-        setPopularMovies(popularRes.data.results);
-        setTopRatedMovies(topRatedRes.data.results);
-      } catch (error) {
-        console.error("Failed to fetch movies:", error);
-      }
-    };
+ useEffect(() => {
+  const fetchMovies = async () => {
+    try {
+      const [popularRes, topRatedRes] = await Promise.all([
+        axios.get("https://api.themoviedb.org/3/movie/popular", {
+          params: {
+            api_key: import.meta.env.VITE_TMDB_API_KEY,
+            language: "en-US",
+            page: 1,
+          },
+        }),
+        axios.get("https://api.themoviedb.org/3/movie/top_rated", {
+          params: {
+            api_key: import.meta.env.VITE_TMDB_API_KEY,
+            language: "en-US",
+            page: 1,
+          },
+        }),
+      ]);
+      setPopularMovies(popularRes.data.results);
+      setTopRatedMovies(topRatedRes.data.results);
+    } catch (error) {
+      console.error("Failed to fetch movies:", error);
+    }
+  };
 
-    fetchMovies();
-  }, []);
+  fetchMovies();
+}, []);
+
 
   const openModal = (movie, location) => {
     const user = auth.currentUser;

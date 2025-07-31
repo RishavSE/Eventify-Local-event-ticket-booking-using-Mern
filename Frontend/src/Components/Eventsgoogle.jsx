@@ -16,7 +16,7 @@ const GoogleEvents = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/events");
+        const response = await axios.get("https://eventify-local-event-ticket-booking.onrender.com/api/events");
         const results = response.data.events_results;
         setEvents(Array.isArray(results) ? results : []);
       } catch (error) {

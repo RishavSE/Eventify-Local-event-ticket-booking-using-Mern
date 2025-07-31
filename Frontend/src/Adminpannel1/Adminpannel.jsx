@@ -24,7 +24,8 @@ const AdminPanel = () => {
     availableBack: 0,
   });
 
-  const TMDB_API_KEY = "e27ed7074beb1b541d30504cd37b496a";
+  const TMDB_API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
 
   // ✅ Auto-reset seats at 12AM if needed
   useEffect(() => {
@@ -111,7 +112,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchAPIData = async () => {
       try {
-        const eventRes = await axios.get("http://localhost:5001/api/events");
+        const eventRes = await axios.get("https://eventify-local-event-ticket-booking.onrender.com//api/events");
         setTotalEvents(eventRes.data.events_results?.length || 0);
 
         const [popular, topRated] = await Promise.all([

@@ -2,9 +2,11 @@
   "name": "event-proxy-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "node Server.js",
+  "build": "echo 'No build step required'"
+
   },
   "keywords": [],
   "author": "",

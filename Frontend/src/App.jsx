@@ -23,7 +23,7 @@ import AdminPanel from "./Adminpannel1/Adminpannel";
 import RequireAdmin from "./Adminpannel1/Requireadmin";
 
 import { signOut, onAuthStateChanged } from "firebase/auth";
-import { auth } from "./Firebase";
+import { auth } from "../src/Firebase";
 
 // ✅ Admin Header UI
 function AdminHeader({ onLogout }) {

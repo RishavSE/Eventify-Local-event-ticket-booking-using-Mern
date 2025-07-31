@@ -28,8 +28,7 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 - 🎫 Browse events and movies
 - ✅ Real-time ticket booking and availability
 - 📋 View “My Tickets”
-- 🧾 PDF ticket generation
-- ♻️ Password reset via email
+- 🧾 Downloadable PDF ticket
 
 ### 🧑‍💼 Admin Features
 - 🔐 Admin-secured dashboard
@@ -42,6 +41,22 @@ It supports two roles — **users** and **admins** — with secure Firebase auth
 - 🪑 Manage seat availability
 - 🔁 Auto seat reset every day at **12:00 AM**
 
+
+📱 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐕𝐄 𝐔𝐈
+
+  -🧩 Built with fully responsive design using plain CSS and media queries.
+
+  -📱 Optimized for all screen sizes — from mobile phones to large desktops.
+
+  -🎯 Flexible layouts using Flexbox, percentage-based widths, and adaptive components.
+
+🧪 Tested on:
+
+  -📱 Android & iOS smartphones
+
+  -💻 Laptops & desktops
+
+  -📱 Chrome DevTools device simulators
 ---
 
 
